@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class='row'>
+  <div class="large-8 columns">
+    <fieldset>
+      <legend>Your Repos</legend>
+
+      <div class="row">
+        <div class="large-8 columns">
+
+          {% for repo in repos %}
+          <ul class="vcard" >
+            <li>{{ repo.name }} </li>
+            <li><a href="{{ repo.html_url }}">Go to Repo</a></li>
+
+          </ul>
+          {% endfor %}
+
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+{% endblock %}
